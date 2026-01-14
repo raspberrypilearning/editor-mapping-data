@@ -1,45 +1,47 @@
-## What you will make
-OR
-## What you will do - change meta if you use this
+<h2 class="c-project-heading--task">Show the world map</h2>
 
-A brief description - one or two sentences. 
+<h2 class="c-project-heading--explainer">In this project you will make an interactive map that lets users see the happiness measures of different countries.</h2>
 
---- print-only ---
+--- task ---
 
-![ALT TEXT](images/IMAGE.png)
+Start by showing a map.
 
---- /print-only ---
+--- /task ---
 
---- no-print ---
+Create a global variable called 'map' and set it to load the old_map.jpg image.
 
-[Editor embed](https://editor.raspberrypi.org/en/embed/viewer/project-slug)
+Then set the canvas size in the `setup()` function.
 
---- /no-print ---
+<div class="c-project-code">
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 7
+line_highlights: 9,10,14
+---
+# Put code to run once here
+def preload():
+    global map
+    map = load_image("old_map.jpg")
 
---- no-print ---
 
-Video embed
-
-<video width="640" height="360" controls>
-<source src="images/videoname.mp4" type="video/mp4">
-</video>
-
-Youtube embed 
-<html>
-<div style="position: relative; overflow: hidden; padding-top: 56.25%;">
-<iframe style="position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100%; border: none;" src="https://www.youtube.com/embed/XXXXXXXXX?rel=0&cc_load_policy=1" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
-</iframe>
-</div><br>
-</html>
-
-Scratch embed
-<div class="scratch-preview">
- <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/XXXXXXXXX/?autostart=false" frameborder="0"></iframe>
+def setup():
+    size(991, 768)
+--- /code ---
 </div>
 
---- /no-print ---
+<div class="c-project-output">
 
-### You will need:
-- a
-- b
-- c
+![A map of the world (in a purple ink style) in the visual output tab](images/ink_map.png)
+</div>
+
+<div class="c-project-callout c-project-callout--tip">
+
+### Tip
+
+- The canvas size is **991** pixels by **768** pixels.
+
+</div>
+
