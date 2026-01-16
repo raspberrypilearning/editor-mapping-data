@@ -1,8 +1,6 @@
 <h2 class="c-project-heading--task">Load some data</h2>
 --- task ---
-
-Define a `load_data()` function to take a `file_name` variable. Have your function open that file and `print()` out every line in it.
-
+Use the existing 'happy.csv' file
 --- /task ---
 
 Define a `load_data()` function to take a `file_name` variable and `print()` out every line in it.
