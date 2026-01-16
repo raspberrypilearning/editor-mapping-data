@@ -3,6 +3,9 @@ from p5 import *
 from regions import get_region_coords
 from random import randint
 
+region_list = []
+colours = {}
+
 
 # Put code to run once here
 def preload():

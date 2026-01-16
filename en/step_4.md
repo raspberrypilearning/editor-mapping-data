@@ -2,11 +2,11 @@
 
 --- task ---
 
-Your pin will need to be a single colour so that it is easy for a user to click on.
+Your pin will be a single colour.
 
 --- /task ---
 
-Create a function to draw a pin
+Create a function to draw a pin.
 
 <div class="c-project-code">
 --- code ---
@@ -14,7 +14,7 @@ Create a function to draw a pin
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 36
+line_number_start: 32
 line_highlights: 
 ---
 def draw_pin(x, y, colour):
@@ -26,7 +26,6 @@ def draw_pin(x, y, colour):
 
 </div>
 
-
 Call your new function.
 
 <div class="c-project-code">
@@ -35,8 +34,8 @@ Call your new function.
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 13
-line_highlights: 23
+line_number_start: 15
+line_highlights: 25
 ---
 def setup():
     size(991, 768)
@@ -55,17 +54,7 @@ def setup():
 --- task ---
 
 Click **Run** to see what your project should look like at this stage.
+
+You will see one red pin (circle).
 --- /task ---
-<div class="c-project-output">
-<iframe src="https://editor.raspberrypi.org/en/embed/viewer/editor-mapping-data-step-4" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe>
-</div>
-
-<div class="c-project-callout c-project-callout--tip">
-
-### Tip
-
-- You will only see one red pin (circle)
-
-</div>
 

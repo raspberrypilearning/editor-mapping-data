@@ -3,6 +3,9 @@ from p5 import *
 from regions import get_region_coords
 from random import randint
 
+region_list = []
+colours = {}
+
 
 # Put code to run once here
 def preload():
@@ -30,7 +33,13 @@ def mouse_pressed():
 def load_data(file_name):
     with open(file_name) as f:
         for line in f:
-            print(line)
+            info = line.split(",")
+            region_dict = {
+                "name": info[0],
+                "happiness rank": info[1],
+                "happiness score": info[2],
+            }
+            print(region_dict)
 
 
 run()
