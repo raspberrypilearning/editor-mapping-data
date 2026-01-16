@@ -9,7 +9,7 @@ Start by showing a map.
 
 Create a global variable called 'map' and set it to load the 'old_map.jpg' image.
 
-Then set the canvas size in the `setup()` function.
+Then set the canvas size and image in the `setup()` function.
 
 <div class="c-project-code">
 --- code ---
