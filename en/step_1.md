@@ -9,5 +9,5 @@ In this project you will make an interactive map that shows the happiness measur
 </div>
 
 --- task ---
-Click **Run** to see an example of colourful graphics.
+Click **Run** to try the finished project.
 --- /task ---

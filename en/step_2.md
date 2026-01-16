@@ -9,7 +9,7 @@ Start by showing a map.
 
 Create a global variable called 'map' and set it to load the 'old_map.jpg' image.
 
-Then set the canvas size and image in the `setup()` function.
+Replace `pass` in the `setup()` function with the canvas size and image data.
 
 <div class="c-project-code">
 --- code ---
@@ -17,8 +17,8 @@ Then set the canvas size and image in the `setup()` function.
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 7
-line_highlights: 9,10,14-21
+line_number_start: 9
+line_highlights: 11,12,16-23
 ---
 # Put code to run once here
 def preload():
@@ -40,7 +40,7 @@ def setup():
 
 --- task ---
 
-Click **Run** to see what your project shoud look like at this stage.
+Click **Run** to see what your project should look like at this stage.
 --- /task ---
 <div class="c-project-output">
 

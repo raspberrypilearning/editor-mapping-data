@@ -3,7 +3,7 @@
 Use the existing 'happy.csv' file
 --- /task ---
 
-Define a `load_data()` function to take a `file_name` variable and `print()` out every line in it.
+Define a `load_data()` function to print the data in the file.
 
 <div class="c-project-code">
 --- code ---
@@ -12,16 +12,23 @@ language: python
 filename: main.py
 line_numbers: true
 line_number_start: 27
-line_highlights: 31-34
+line_highlights: 32-41
 ---
 # Put code to run when the mouse is pressed here
 def mouse_pressed():
     pixel_colour = Color(get(mouse_x, mouse_y)).hex
 
+
 def load_data(file_name):
     with open(file_name) as f:
         for line in f:
-            print(line)
+            info = line.split(",")
+            region_dict = {
+                "name": info[0],
+                "happiness rank": info[1],
+                "happiness score": info[2],
+            }
+            print(region_dict)
 --- /code ---
 </div>
 
@@ -33,8 +40,8 @@ Then call your function to use the happiness data file.
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 16
-line_highlights: 25
+line_number_start: 15
+line_highlights: 24
 ---
 def setup():
     size(991, 768)
@@ -51,7 +58,7 @@ def setup():
 
 --- task ---
 
-Click **Run** to see what your project shoud look like at this stage.
+Click **Run** to see what your project should look like at this stage.
 --- /task ---
 <div class="c-project-output">
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/editor-mapping-data-step-3" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
