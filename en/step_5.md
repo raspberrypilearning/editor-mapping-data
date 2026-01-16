@@ -11,7 +11,7 @@ In the `load_data()` function, comment out the `print` and instead add each regi
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 43
+line_number_start: 48
 line_highlights:
 ---
             # print(region_dict)
@@ -27,7 +27,7 @@ Define a `draw_data()` function that draws pins at each region's coordinates.
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 53
+line_number_start: 52
 line_highlights:
 ---
 def draw_data():
@@ -52,7 +52,7 @@ Then, in the setup function, comment out the `draw_pin` function and add a call 
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 26
+line_number_start: 25
 line_highlights:
 ---
     # draw_pin(300, 300, Color(255, 0, 0))
