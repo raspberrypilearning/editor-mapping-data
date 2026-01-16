@@ -1,4 +1,3 @@
-#!/bin/python3
 from p5 import *
 from regions import get_region_coords
 from random import randint
