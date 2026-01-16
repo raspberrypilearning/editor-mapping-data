@@ -1,156 +1,47 @@
-## Pick a map and pins
+<h2 class="c-project-heading--task">Load some data</h2>
 
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Choose how you'll display the data you've selected.
-</div>
-<div>
-![A map with a single pin marked in the centre.](images/single_pin.png){:width="300px"}
-</div>
-</div>
+<h2 class="c-project-heading--explainer">In this project you will make an interactive map that shows the happiness measures of different regions.</h2>
 
 --- task ---
 
-Add code to your `setup()` function to set the size of your canvas to **991** pixels wide and **768** pixels high.
-
---- code ---
----
-language: python
-filename: main.py - setup()
-line_numbers: false
-line_number_start: 
-line_highlights: 3
----
-# Put code to run once here
-def setup():
-    size(991, 768)
-    load_data('happy.csv')  
-    
-
---- /code ---
+Define a `load_data()` function to take a `file_name` variable. Have your function open that file and `print()` out every line in it.
 
 --- /task ---
 
---- task ---
+Define a `load_data()` function to take a `file_name` variable and `print()` out every line in it.
 
-Think about how you want to display the data you've picked: what kind of map do you want to use? 
-+ ink-map.jpg
-+ mercator.jpeg
-+ mercator_bw.png
-+ old-map.jpg
-+ computer-map.jpg
-
-![A list of map images available in the starter project](images/all_maps.png)
-
---- /task ---
-
---- task ---
-
-**Choose:** The starter project includes five map images. Pick one you like, and load the image in a `preload` function.
-
+<div class="c-project-code">
 --- code ---
 ---
 language: python
 filename: main.py
-line_numbers: false
-line_number_start: 
-line_highlights: 3
+line_numbers: true
+line_number_start: 27
+line_highlights: 31-34
 ---
-def preload():
-    global map
-    map = load_image('mercator.jpeg')
+# Put code to run when the mouse is pressed here
+def mouse_pressed():
+    pixel_colour = Color(get(mouse_x, mouse_y)).hex
 
+def load_data(file_name):
+    with open(file_name) as f:
+        for line in f:
+            print(line)
 --- /code ---
+</div>
 
---- /task ---
+Then call your function to use the happiness data file.
 
---- task ---
-
-Add code to your `setup()` function to draw the map so it covers the whole canvas.
-
-[[[p5-coordinates]]]
-
+<div class="c-project-code">
 --- code ---
 ---
 language: python
-filename: main.py - setup()
-line_numbers: false
-line_number_start: 
-line_highlights: 5-12
+filename: main.py
+line_numbers: true
+line_number_start: 16
+line_highlights: 25
 ---
 def setup():
-    # Put code to run once here
-    size(991, 768)   
-    load_data('happy.csv')  
-    image(
-        map,  # The image to draw
-        0,  # The x of the top-left corner
-        0,  # The y of the top-left corner
-        width,  # The width of the image
-        height  # The height of the image
-    )
---- /code ---
-
---- /task ---
-
---- task ---
-
-**Test:** Run your program and look at your map!
-
---- /task ---
-
---- task ---
-
-**Choose:** What shape of pin will you place in each location? Your pin will need to be a single colour so that it is easy for a user to click on.
-
-You could choose a single shape, such as:
-+ A circle
-+ A square
-+ A triangle
-
-Or you could create a pin out of multiple geometric shapes, such as:
-+ A heart
-+ A map pin
-+ A star
-
-![A selection of pins made from geometric shapes including a square, pin, heart, circle and star.](images/pin-examples.png)
-
---- /task ---
-
---- task ---
-
-Define a function called `draw_pin`. It should draw a pin, of your own design, on the map. It should take three parameters:
-
- - The x coordinate for the pin.
- - The y coordinate for the pin.
- - The colour of the pin. This should be a `p5` `Color()`.
-
---- code ---
----
-language: python
-filename: main.py - draw_pin()
-line_numbers: 
-line_number_start: 
-line_highlights: 
----
-def draw_pin(x, y, colour):
-    # Put code to draw your pin here
---- /code ---
-
-As you create your `draw_pin` function, call it to see how it appears on the screen. You should call your `draw_pin` function from the `setup()` function. 
-
-You can use the arguments shown below to place a `red` pin the middle of the screen.
-
---- code ---
----
-language: python
-filename: main.py - setup()
-line_numbers: false
-line_number_start: 
-line_highlights: 11
----
-def setup():
-    # Put code to run once here
     size(991, 768)
     image(
         map,  # The image to draw
@@ -159,105 +50,36 @@ def setup():
         width,  # The width of the image
         height  # The height of the image
     )
-    draw_pin(300, 300, Color(255,0,0))
+    load_data('happy.csv')
 --- /code ---
+</div>
 
-[[[parameters]]]
-
---- collapse ---
----
-title: Colours in p5
----
-
-The `p5` `Color()` function expects three numbers: one each for red, green, and blue.
-
-```python
-blue = Color(92, 204, 206) #Red = 92, Green = 204, Blue = 206
-```
-
-You can use the `fill()` function to fill a shape with colour. `fill()` applies to every shape drawn after it.
-
-```python
-green = Color(149, 212, 122)
-fill(green)
-rect(0, 250, 400, 150)  # This shape will be filled with the colour
-```
-
-To remove fills completely, call `no_fill()` before drawing your shape(s).
-
-You can set a colour for the border around a shape with the `stroke()` function:
-
-```python
-white = Color(255, 255, 255)
-stroke(white)
-rect(0, 250, 400, 150)  # This shape will have a white border
-```
-
---- /collapse ---
-
-[[[generic-theory-simple-colours]]]
-
-[[[processing-python-ellipse]]]
-
-[[[processing-python-rect]]]
-
-[[[processing-python-triangle]]]
-
-**Tip:** Your `draw_pin` function can make other shapes out of these basic ones.
-
---- /task ---
-
+<div class="c-project-output">
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+Click **Run** to see what your project shoud look like at this stage.
+--- /task ---
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/editor-mapping-data-step-3" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe>
+</div>
 
---- collapse ---
----
-title: My map isn't loading
----
+<div class="c-project-callout c-project-callout--tip">
 
-Check the filename really carefully — remember capital letters are different to lower-case letters and punctuation is important.
+### Tip
 
---- /collapse ---
+The columns of the data are:
 
---- collapse ---
----
-title: My map is the wrong size
----
+ - The name of the region
+ - Where that region ranks in the world for average happiness
+ - The average happiness score for the region
 
-Check the inputs that control the width and height of the image:
+Here is an example of the data in this file:
 
-```python
-    image(
-        map,  # The image to draw
-        0,  # The x of the top-left corner
-        0,  # The y of the top-left corner
-        width,  # The width of the image
-        height  # The height of the image
-    )
+```
+Norway,1,7.537000179
+Denmark,2,7.521999836
+Iceland,3,7.504000187
 ```
 
---- /collapse ---
+</div>
 
---- collapse ---
----
-title: My pin isn't appearing
----
-
-Make sure that you have called the `draw_pin()` function in your `draw()` function, and passed it the values it needs. For example:
-
---- code ---
----
-language: python
-filename: main.py - draw()
----
-    draw_pin(width/2, height/2, Color(255,0,0))
---- /code ---
-
-Also, make sure you are calling `draw_pin()` after you call `image()` to create the background. If not, you're drawing the map over the pin!
-
---- /collapse ---
-
---- /task ---
-
---- save ---
