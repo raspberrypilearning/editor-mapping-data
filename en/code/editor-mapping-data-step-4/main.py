@@ -20,6 +20,7 @@ def setup():
         height,  # The height of the image
     )
     load_data("happy.csv")
+    draw_pin(300, 300, Color(255, 0, 0))
 
 
 # Put code to run when the mouse is pressed here
@@ -31,6 +32,12 @@ def load_data(file_name):
     with open(file_name) as f:
         for line in f:
             print(line)
+
+
+def draw_pin(x, y, colour):
+    no_stroke()
+    fill(colour)
+    ellipse(x, y, 10, 10)
 
 
 run()
