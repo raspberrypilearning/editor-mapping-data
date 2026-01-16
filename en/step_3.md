@@ -1,7 +1,4 @@
 <h2 class="c-project-heading--task">Load some data</h2>
-
-<h2 class="c-project-heading--explainer">In this project you will make an interactive map that shows the happiness measures of different regions.</h2>
-
 --- task ---
 
 Define a `load_data()` function to take a `file_name` variable. Have your function open that file and `print()` out every line in it.
