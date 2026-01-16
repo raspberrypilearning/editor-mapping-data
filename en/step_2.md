@@ -17,8 +17,8 @@ Replace `pass` in the `setup()` function with the canvas size and image data.
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 9
-line_highlights: 11,12,16-23
+line_number_start: 10
+line_highlights: 12,13,17-24
 ---
 # Put code to run once here
 def preload():
