@@ -54,11 +54,11 @@ def setup():
 --- /code ---
 </div>
 
-<div class="c-project-output">
 --- task ---
 
 Click **Run** to see what your project shoud look like at this stage.
 --- /task ---
+<div class="c-project-output">
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/editor-mapping-data-step-3" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 </div>
