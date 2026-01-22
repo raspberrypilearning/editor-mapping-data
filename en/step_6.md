@@ -11,8 +11,8 @@ In your `mouse_pressed()` function, lookup the `pixel_colour` in the `colours` d
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 30
-line_highlights:
+line_number_start: 62
+line_highlights: 64-70
 ---
 def mouse_pressed():
     pixel_colour = Color(get(mouse_x, mouse_y)).hex
@@ -23,47 +23,6 @@ def mouse_pressed():
         print(facts['happiness score'])
     else:
         print('Region not detected')
---- /code ---
-</div>
-
-Define a `draw_data()` function that draws pins at each region's coordinates.
-
-<div class="c-project-code">
---- code ---
----
-language: python
-filename: main.py
-line_numbers: true
-line_number_start: 60
-line_highlights:
----
-def draw_data():
-    red_value = 255
-    for region in region_list:
-        region_name = region["name"]  # Get the name of the region
-        region_coords = get_region_coords(region_name)  # Get region coordinates
-        region_x = region_coords["x"]  # Get the x coordinate
-        region_y = region_coords["y"]  # Get the y coordinate
-        region_colour = Color(red_value, 100, 0)  # Set the pin colour
-        colours[region_colour.hex] = region
-        draw_pin(region_x, region_y, region_colour)  # Draw the pin
-        red_value -= 1
---- /code ---
-</div>
-
-Then, in the setup function, comment out the `draw_pin` function and add a call to your new `draw_data` function.
-
-<div class="c-project-code">
---- code ---
----
-language: python
-filename: main.py
-line_numbers: true
-line_number_start: 26
-line_highlights:
----
-    # draw_pin(300, 300, Color(255, 0, 0))
-    draw_data()
 --- /code ---
 </div>
 

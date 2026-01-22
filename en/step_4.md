@@ -14,9 +14,12 @@ Create a function to draw a pin.
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 32
-line_highlights: 
+line_number_start: 24
+line_highlights: 27-30
 ---
+            print(region_dict)
+
+
 def draw_pin(x, y, colour):
     no_stroke()
     fill(colour)
@@ -34,8 +37,8 @@ Call your new function.
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 15
-line_highlights: 25
+line_number_start: 33
+line_highlights: 43
 ---
 def setup():
     size(991, 768)

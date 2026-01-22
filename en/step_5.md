@@ -5,31 +5,21 @@ Place pins on the map to mark the regions at their coordinates.
 
 In the `load_data()` function, comment out the `print` and instead add each region in the dictionary to the region list.
 
+Then define a `draw_data()` function that draws pins at each region's coordinates.
+
 <div class="c-project-code">
 --- code ---
 ---
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 48
+line_number_start: 24
 line_highlights:
 ---
             # print(region_dict)
             region_list.append(region_dict)
---- /code ---
-</div>
 
-Define a `draw_data()` function that draws pins at each region's coordinates.
 
-<div class="c-project-code">
---- code ---
----
-language: python
-filename: main.py
-line_numbers: true
-line_number_start: 52
-line_highlights:
----
 def draw_data():
     red_value = 255
     for region in region_list:
@@ -44,7 +34,7 @@ def draw_data():
 --- /code ---
 </div>
 
-Then, in the setup function, comment out the `draw_pin` function and add a call to your new `draw_data` function.
+In the setup function, comment out the `draw_pin` function and add a call to your new `draw_data` function.
 
 <div class="c-project-code">
 --- code ---
@@ -52,7 +42,7 @@ Then, in the setup function, comment out the `draw_pin` function and add a call 
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 25
+line_number_start: 57
 line_highlights:
 ---
     # draw_pin(300, 300, Color(255, 0, 0))
