@@ -52,7 +52,7 @@ line_highlights:
 
 --- task ---
 
-Click **Run** to see your finished project should look like.
+Click **Run** to see what your project should look like at this stage.
 --- /task ---
 <div class="c-project-output">
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/editor-mapping-data-step-5" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>

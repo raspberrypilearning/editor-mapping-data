@@ -28,10 +28,10 @@ def mouse_pressed():
 
 --- task ---
 
-Click **Run** to see your finished project should look like.
+**Test**: Click **Run** and click on a pin to see the data for that region.
 --- /task ---
 <div class="c-project-output">
-<iframe src="https://editor.raspberrypi.org/en/embed/viewer/editor-mapping-data-step-5" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe>
+
+![The data for Uruguay showing in the text output](images/data.png)
 </div>
 
