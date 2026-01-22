@@ -11,12 +11,13 @@ Define a `load_data()` function to print the data in the file.
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 27
-line_highlights: 32-41
+line_number_start: 9
+line_highlights: 15-24
 ---
-# Put code to run when the mouse is pressed here
-def mouse_pressed():
-    pixel_colour = Color(get(mouse_x, mouse_y)).hex
+# Put code to run once here
+def preload():
+    global map
+    map = load_image("old-map.jpg")
 
 
 def load_data(file_name):
@@ -40,8 +41,8 @@ Then call your function to use the happiness data file.
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 15
-line_highlights: 24
+line_number_start: 27
+line_highlights: 36
 ---
 def setup():
     size(991, 768)
