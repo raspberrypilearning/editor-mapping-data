@@ -10,16 +10,16 @@ version: 4
 listed: false
 copyedit: false
 last_tested: "2026-01-12"
+landing: true
 steps:
-- title: Step 1
-- title: Step 2
-  completion:
-  - engaged
-- title: Step 3
-- title: Step 4
-- title: Step 5
-- title: Step 6
-- title: Step 7
-  completion:
-  - internal
-  - external
+  - title: Show the world map
+  - title: Load some data
+    completion:
+      - engaged
+  - title: Add a pin
+  - title: Draw the data pins
+  - title: Click to see the region's data
+    completion:
+      - internal
+  - title: Challenge
+    challenge: true

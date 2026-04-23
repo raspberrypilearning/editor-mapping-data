@@ -1,9 +1,10 @@
-<h2 class="c-project-heading--task">Load some data</h2>
---- task ---
-Use the existing 'happy.csv' file
---- /task ---
+<h2 class="c-project-heading--task">Add a pin</h2>
 
-Define a `load_data()` function to print the data in the file.
+Your pin will be a single colour.
+
+<h2 class="c-project-heading--explainer">Follow these instructions</h2>
+
+Create a function to draw a pin.
 
 <div class="c-project-code">
 --- code ---
@@ -11,29 +12,22 @@ Define a `load_data()` function to print the data in the file.
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 9
-line_highlights: 15-24
+line_number_start: 24
+line_highlights: 27-30
 ---
-# Put code to run once here
-def preload():
-    global map
-    map = load_image("old-map.jpg")
-
-
-def load_data(file_name):
-    with open(file_name) as f:
-        for line in f:
-            info = line.split(",")
-            region_dict = {
-                "name": info[0],
-                "happiness rank": info[1],
-                "happiness score": info[2],
-            }
             print(region_dict)
+
+
+def draw_pin(x, y, colour):
+    no_stroke()
+    fill(colour)
+    ellipse(x, y, 10, 10)
+
 --- /code ---
+
 </div>
 
-Then call your function to use the happiness data file.
+Call your new function.
 
 <div class="c-project-code">
 --- code ---
@@ -41,8 +35,8 @@ Then call your function to use the happiness data file.
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 27
-line_highlights: 36
+line_number_start: 33
+line_highlights: 43
 ---
 def setup():
     size(991, 768)
@@ -54,35 +48,10 @@ def setup():
         height  # The height of the image
     )
     load_data('happy.csv')
+    draw_pin(300, 300, Color(255,0,0))
 --- /code ---
 </div>
 
---- task ---
+## Now run your code
 
-Click **Run** to see what your project should look like at this stage.
---- /task ---
-<div class="c-project-output">
-<iframe src="https://editor.raspberrypi.org/en/embed/viewer/editor-mapping-data-step-3" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe>
-</div>
-
-<div class="c-project-callout c-project-callout--tip">
-
-### Tip
-
-The columns of the data are:
-
- - The name of the region
- - Where that region ranks in the world for average happiness
- - The average happiness score for the region
-
-Here is an example of the data in this file:
-
-```
-Norway,1,7.537000179
-Denmark,2,7.521999836
-Iceland,3,7.504000187
-```
-
-</div>
-
+Check what your project should look like at this stage. You will see one red pin (circle).
