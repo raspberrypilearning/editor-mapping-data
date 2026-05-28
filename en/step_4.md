@@ -2,8 +2,6 @@
 
 Place pins on the map to mark the regions at their coordinates.
 
-<h2 class="c-project-heading--explainer">Follow these instructions</h2>
-
 In the `load_data()` function, comment out the `print` and instead add each region in the dictionary to the region list.
 
 Then define a `draw_data()` function that draws pins at each region's coordinates.
