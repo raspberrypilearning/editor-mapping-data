@@ -2,8 +2,6 @@
 
 When the user clicks on a pin, the hex colour value of the pin is retrieved, and then the corresponding region is found in the dictionary.
 
-<h2 class="c-project-heading--explainer">Follow these instructions</h2>
-
 In your `mouse_pressed()` function, lookup the `pixel_colour` in the `colours` dictionary and print out the `region`.
 
 <div class="c-project-code">

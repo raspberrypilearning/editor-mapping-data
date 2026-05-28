@@ -2,8 +2,6 @@
 
 Your pin will be a single colour.
 
-<h2 class="c-project-heading--explainer">Follow these instructions</h2>
-
 Create a function to draw a pin.
 
 <div class="c-project-code">
