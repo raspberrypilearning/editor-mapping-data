@@ -2,8 +2,6 @@
 
 Start by showing a map.
 
-<h2 class="c-project-heading--explainer">Follow these instructions</h2>
-
 Create a global variable called 'map' and set it to load the 'old_map.jpg' image.
 
 Replace `pass` in the `setup()` function with the canvas size and image data.
