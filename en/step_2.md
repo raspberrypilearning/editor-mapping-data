@@ -2,8 +2,6 @@
 
 Use the existing 'happy.csv' file
 
-<h2 class="c-project-heading--explainer">Follow these instructions</h2>
-
 Define a `load_data()` function to print the data in the file.
 
 <div class="c-project-code">
