@@ -2,8 +2,6 @@
 
 Change the map design.
 
-<h2 class="c-project-heading--explainer">Follow these instructions</h2>
-
 In the `preload()` function, change the map from "old-map.jpg" to "ink-map.jpg"
 
 <div class="c-project-code">
