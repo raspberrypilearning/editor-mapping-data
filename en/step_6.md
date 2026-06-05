@@ -2,7 +2,7 @@
 
 Change the map design.
 
-In the `preload()` function, change the map from "old-map.jpg" to "ink-map.jpg"
+In the `preload()` function, change the map from "old-map.jpg" to "ink-map.jpg".
 
 <div class="c-project-code">
 --- code ---
