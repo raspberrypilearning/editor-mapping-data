@@ -1,6 +1,6 @@
 <h2 class="c-project-heading--task">Load some data</h2>
 
-Use the existing 'happy.csv' file
+Use the existing 'happy.csv' file.
 
 Define a `load_data()` function to print the data in the file.
 
