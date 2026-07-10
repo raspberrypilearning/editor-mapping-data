@@ -1,18 +1,12 @@
-<h2 class="c-project-heading--task">Add a pin</h2>
+## Add a pin
 
 Your pin will be a single colour.
 
+## Step 1
+
 Create a function to draw a pin.
 
-<div class="c-project-code">
---- code ---
----
-language: python
-filename: main.py
-line_numbers: true
-line_number_start: 24
-line_highlights: 27-30
----
+```python filename="main.py" line_numbers="true" line_number_start="24" line_highlights="27-30"
             print(region_dict)
 
 
@@ -21,21 +15,13 @@ def draw_pin(x, y, colour):
     fill(colour)
     ellipse(x, y, 10, 10)
 
---- /code ---
+```
 
-</div>
+## Step 2
 
 Call your new function.
 
-<div class="c-project-code">
---- code ---
----
-language: python
-filename: main.py
-line_numbers: true
-line_number_start: 33
-line_highlights: 43
----
+```python filename="main.py" line_numbers="true" line_number_start="33" line_highlights="43"
 def setup():
     size(991, 768)
     image(
@@ -47,8 +33,7 @@ def setup():
     )
     load_data('happy.csv')
     draw_pin(300, 300, Color(255,0,0))
---- /code ---
-</div>
+```
 
 ## Now run your code
 
